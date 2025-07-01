@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class search2 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        try(Scanner scanner=new Scanner(System.in)){
 
         // 假設數列已排序
         int[] S = {3, 8, 15, 23, 42, 55};
@@ -31,5 +31,5 @@ public class search2 {
         scanner.close();
     }
 }
-
+}
     
