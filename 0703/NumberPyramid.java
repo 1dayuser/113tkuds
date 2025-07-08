@@ -2,24 +2,22 @@ import java.util.Scanner;
 
 public class NumberPyramid {
     public static void main(String[] args) {
-        try(Scanner sc = new Scanner(System.in)){
+        Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
 
         for (int i = 1; i <= N; i++) {
-            for (int j = 1; j <= i; j++) {
-                System.out.print(j);
-                System.out.print(" ");
-            }
+            StringBuilder line = new StringBuilder();
 
+            for (int j = 1; j <= i; j++) {
+                line.append(j).append(" ");
+            }
             for (int j = i - 1; j >= 1; j--) {
-                System.out.print(j);
+                line.append(j);
                 if (j != 1) {
-                    System.out.print(" ");
+                    line.append(" ");
                 }
             }
-
-            System.out.println(); 
+            System.out.println(line.toString().trim());
         }
     }
-}
 }
