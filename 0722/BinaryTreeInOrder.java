@@ -20,12 +20,6 @@ public class BinaryTreeInOrder {
     }
 
     public static void main(String[] args) {
-        // 建立範例樹：
-        //        1
-        //       / \
-        //      2   3
-        //     / \
-        //    4   5
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
         root.right = new TreeNode(3);
@@ -34,6 +28,5 @@ public class BinaryTreeInOrder {
 
         System.out.print("中序走訪結果: ");
         inOrder(root);
-        // 預期輸出: 4 2 5 1 3 
     }
 }
